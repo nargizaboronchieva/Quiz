@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Highscores and Timer -->
+
+  <div class="bg-info clearfix">
+    <div id="highScores" class="top-left">
+      <button id="view-highscores" type="button" class="btn btn-secondary float-left">View highscores</button>
+    </div>
+    <button type="button" class="btn btn-secondary float-right">Time: <span id="timer"></span></button>
+  </div>
+
+  <!-- Start Quiz -->
+
+  <div class="start m-auto w-50 h-25">
+    <div class="card text-center">
+      <div class="card-body">
+        <h1>Coding Quiz Challenge.</h1>
+        <p class="card-text"> Try to answer the following code -related questions within the time limit. Keep in mind that incorrect answer will penalize your scoretime by ten seconds.</p>
+        <button type="submit" class="btn btn-secondary">Start Quiz!</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Questions and answers  -->
+
+  <div class="quiz">
+    <div class="card m-auto w-75">
+      <div class="card-header">
+        <h2>Question</h2>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote">
+          <ul></ul>
+          <footer>
+            <div class="feedback" style="padding-top:2%;"></div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+    <!-- Highscores List and Local Storage -->
+
+    <div class="highScorePage mt-0">
+    <div id="highscoresList">
+      <div class="card m-auto w-75">
+        <div class="card-header">
+          <h3>Highscores</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <ol id="scoreList"></ol>
+          </form>
+          <button id="go-back" class="btn btn-secondary">Try again</button>
+          <button id="clear" class="btn btn-secondary">Clear highscores</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Score & Initials -->
+
+  <div class="scoreContainer m-auto w-75">
+    <div id="initialsArray">
+      <div class="card">
+        <div class="card-header">
+          All done!
+        </div>
+        <div class="card-body">
+          <p class="card-text">Your score is <span id="scoreNumber"></span>.</p>
+          <form id="initials-form" method="POST">
+            <label for="initials-text">Enter initials:</label>
+            <input type="text" placeholder="" name="initials-text" id="initials-text" />
+          </form>
+          <button id="submit-initials" value="submit" class="btn btn-secondary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <script src="scripts/questions.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+
+</body>
+
+</html>

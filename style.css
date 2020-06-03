@@ -1,0 +1,24 @@
+html, body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    background-color: lightblue;
+}
+.quiz, .scoreContainer, .highScorePage{
+    display: none;
+}
+
+.card {
+    margin-top: 30%;
+    background-image: lightblue;
+}
+
+li:hover {
+    background-color:rgb(152, 152, 201);
+    max-width: unset;
+    cursor: pointer;
+  }
+
+  .highScorePage{
+    margin-buttom: 70%;
+
+  }
